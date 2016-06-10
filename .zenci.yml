@@ -1,0 +1,21 @@
+test:
+  php53:
+    branch:
+      box: 'quadro-leam-php53'
+      dir: '{home}/github/branch/{branch}'
+      env_vars:
+        docroot: '{home}/www'
+        domain: '{branch}.qa.drupal-site.net'
+        database_name: 'test'
+        database_user: 'test'
+        database_pass: ''
+        account_user: admin
+        account_mail: admin@zen.ci
+        account_pass: REPLACE_WITH_ADMIN_PASSWORD
+        site_mail: noreply@zen.ci
+        site_name: '{branch} QA site for {repo_owner}/{repo_name}'
+        default_theme: "bootstrap_lite"
+      scripts:
+        init: '{deploy_dir}/scripts/deploy_init.sh'
+      tests:
+        - '{deploy_dir}/scripts/drupal_tests.sh'
