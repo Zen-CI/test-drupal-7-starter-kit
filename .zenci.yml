@@ -1,7 +1,7 @@
 test:
   php53:
     branch:
-      box: 'octo-leam-php70'
+      box: 'octo-leam-php53'
       dir: '{home}/github/branch/{branch}'
       env_vars:
         docroot: '{home}/www'
