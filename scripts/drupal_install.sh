@@ -2,7 +2,7 @@
 
 echo "Install script started "
 
-CORE='drupal-7'
+CORE='drupal-7.x'
 
 echo "Full site path: $DOCROOT"
 echo "Site core: $CORE"
@@ -11,7 +11,7 @@ cd $DOCROOT
 
 echo "Download DRUPAL."
 
-drush dl $CORE --drupal-project-rename="drupal"
+drush dl $CORE --drupal-project-rename="drupal" --package-handler=git_drupalorg
 rsync -a $DOCROOT/drupal/ $DOCROOT
 rm -rf drupal
 
