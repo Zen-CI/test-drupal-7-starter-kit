@@ -540,11 +540,7 @@ function simpletest_script_write_summary($summary_file) {
     if (isset($results_map[$result->status])) {
       if ($result->test_class != $test_class) {
         // Display test class every time results are for new test class.
-        $test_class = $result->test_class;
-        $info = simpletest_test_get_by_class($test_class);
-        $test_group = $info['group'];
-        $test_name = $info['name'];
-        $summary .= "\n$test_group: $test_name ($test_class)\n";
+        $summary .= "\n" . $test_class. "\n";
         $test_class = $result->test_class;
       }
 
@@ -670,7 +666,7 @@ function simpletest_script_reporter_display_results() {
     echo "Detailed test results\n";
     echo "---------------------\n";
 
-    $results = db_query("SELECT * FROM {simpletest} WHERE test_id = :test_id ORDER BY test_class, message_id", array(':test_id' => $test_id));
+    $results = db_query("SELECT * FROM {simpletest} WHERE test_id = :test_id AND (status = 'exception' OR status = 'fail') ORDER BY test_class, message_id", array(':test_id' => $test_id));
     $test_class = '';
     foreach ($results as $result) {
       if (isset($results_map[$result->status])) {
