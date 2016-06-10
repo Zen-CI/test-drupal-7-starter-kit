@@ -1,7 +1,7 @@
 test:
   php53:
     branch:
-      box: 'quadro-leam-php53'
+      box: 'octo-leam-php70'
       dir: '{home}/github/branch/{branch}'
       env_vars:
         docroot: '{home}/www'
