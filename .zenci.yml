@@ -14,7 +14,6 @@ test:
         account_pass: REPLACE_WITH_ADMIN_PASSWORD
         site_mail: noreply@zen.ci
         site_name: '{branch} QA site for {repo_owner}/{repo_name}'
-        default_theme: "bootstrap_lite"
       scripts:
         init: '{deploy_dir}/scripts/deploy_init.sh'
       tests:
