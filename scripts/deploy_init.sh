@@ -13,7 +13,6 @@ echo "Full site path: $DOCROOT"
 # Go to domain directory.
 cd $DOCROOT
 
-
 echo "Linking modules from $ZENCI_DEPLOY_DIR"
 
 mkdir -p $DOCROOT/sites/all/modules/contrib
