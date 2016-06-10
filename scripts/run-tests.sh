@@ -30,7 +30,7 @@ else {
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 if (!module_exists('simpletest')) {
   simpletest_script_print_error("The simpletest module must be enabled before this script can run.");
-  exit;
+  exit(1);
 }
 
 if ($args['clean']) {
@@ -233,7 +233,7 @@ function simpletest_script_parse_args() {
       else {
         // Argument not found in list.
         simpletest_script_print_error("Unknown argument '$arg'.");
-        exit;
+        exit(1);
       }
     }
     else {
@@ -246,7 +246,7 @@ function simpletest_script_parse_args() {
   // Validate the concurrency argument
   if (!is_numeric($args['concurrency']) || $args['concurrency'] <= 0) {
     simpletest_script_print_error("--concurrency must be a strictly positive integer.");
-    exit;
+    exit(1);
   }
 
   return array($args, $count);
@@ -276,7 +276,7 @@ function simpletest_script_init($server_software) {
   else {
     simpletest_script_print_error('Unable to automatically determine the path to the PHP interpreter. Supply the --php command line argument.');
     simpletest_script_help();
-    exit();
+    exit(1);
   }
 
   // Get URL from arguments.
@@ -478,7 +478,7 @@ function simpletest_script_get_test_list() {
 
   if (empty($test_list)) {
     simpletest_script_print_error('No valid tests were specified.');
-    exit;
+    exit(1);
   }
   return $test_list;
 }

@@ -18,7 +18,7 @@ $data = array(
 
 zenci_put_request($data);
 
-$cmd = 'php ' . $deploy_dir . '/scripts/run-tests.sh --url http://localhost --root=' . $home . ' --all --concurrency 10 --color --summary /tmp/summary';
+$cmd = 'php ' . $deploy_dir . '/scripts/run-tests.sh --url http://localhost --all --concurrency 10 --color --summary /tmp/summary';
 
 $proc = popen($cmd, 'r');
 
