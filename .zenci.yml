@@ -17,4 +17,4 @@ test:
       scripts:
         init: '{deploy_dir}/scripts/deploy_init.sh'
       tests:
-        - '{deploy_dir}/scripts/drupal_tests.sh'
+        - '{deploy_dir}/scripts/drupal_tests.php'
