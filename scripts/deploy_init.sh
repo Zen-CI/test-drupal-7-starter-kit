@@ -1,6 +1,12 @@
 #!/bin/sh
 
-# Install drush and Console_Table
+# Let's speedup database by moving it to /dev/shm
+
+sudo /sbin/service mysql stop
+sudo cp -ax /var/lib/mysql /dev/shm/mysql
+sudo mv /var/lib/mysql /var/lib/mysql.old
+sudo ln -s /dev/shm/mysql /var/lib/mysql
+sudo /sbin/service mysql start
 
 #prepare DOCROOT
 mkdir $DOCROOT
