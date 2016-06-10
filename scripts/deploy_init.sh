@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # Let's speedup database by moving it to /dev/shm
-
 sudo /sbin/service mysql stop
 sudo cp -ax /var/lib/mysql /dev/shm/mysql
 sudo mv /var/lib/mysql /var/lib/mysql.old
