@@ -14,6 +14,7 @@ test:
         account_pass: REPLACE_WITH_ADMIN_PASSWORD
         site_mail: REPLACE_WITH_SITE_EMAIL
         site_name: REPLACE_WITH_SITE_NAME
+        tests: '--all'
       scripts:
         init: '{deploy_dir}/scripts/deploy_init.sh'
       tests:
@@ -32,6 +33,7 @@ test:
         account_pass: REPLACE_WITH_ADMIN_PASSWORD
         site_mail: REPLACE_WITH_SITE_EMAIL
         site_name: REPLACE_WITH_SITE_NAME
+        tests: '--all'        
       scripts:
         init: '{deploy_dir}/scripts/deploy_init.sh'
       tests:
