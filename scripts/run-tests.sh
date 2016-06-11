@@ -2,6 +2,9 @@
 /**
  * @file
  * This script runs Drupal tests from command line.
+ *
+ * ZenCI version.
+ * Provide summary file and verbose display only fail and exception messages.
  */
 
 define('SIMPLETEST_SCRIPT_COLOR_PASS', 32); // Green.

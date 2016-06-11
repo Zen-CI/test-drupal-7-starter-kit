@@ -1,6 +1,7 @@
 #!/bin/sh
+# Install drupal based on ZenCI provided ENV Variables.
 
-echo "Install script started "
+echo "Install script started"
 
 CORE='drupal-7.x'
 

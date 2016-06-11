@@ -19,7 +19,6 @@ chdir($home);
  *
  * To fix false failure, disable theme for links for this test.
  */
-
 exec('drush vset theme_link 0');
 
 $data = array(

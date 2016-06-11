@@ -1,4 +1,6 @@
 #!/bin/sh
+# Deploy init script.
+# ZenCI platform.
 
 # Let's speedup database by moving it to /dev/shm
 sudo /sbin/service mysql stop
